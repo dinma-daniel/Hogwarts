@@ -14,11 +14,25 @@
             </div>
         </div>
     </div>
-    <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 flex flex-row justify-between">
-            <x-borrowlist class="basis-4/5" />
-            <x-booklist class="basis-1/5" />
+    <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8 flex flex-row ">
+        <div class="flex-1 ">
+        <h1 class="text-white">Borrowed Books📕</h1>
+            <!-- hello1 -->
+        <x-borrowlist/>
         </div>
+        <div class=" p-6">
+           
+        <!-- <x-borrowlist/> -->
+        </div>
+        <div class="flex-1 ">
+        <h1 class="text-white">New Books available📖</h1>
+            <!-- hello3 -->
+        <x-booklist />
+        </div>
+        <!-- <x-borrowlist class="flex-1"/> -->
+            <!-- <x-booklist class="flex-1"/> -->
+        
       <br>
     </div>
+    
 </x-app-layout>
