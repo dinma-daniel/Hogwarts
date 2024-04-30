@@ -9,7 +9,7 @@ class BookController extends Controller
 {
     public function index()
     {
-        $books = Book::all(); // Retrieve all books from the database using the Book model
+        $books = Book::orderByDesc('author')->get();
         return view('books', ['books' => $books]);
     }
 
