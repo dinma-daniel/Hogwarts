@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Model;
 
 class User extends Authenticatable
 {
@@ -20,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role',
     ];
 
     /**
@@ -49,4 +51,15 @@ class User extends Authenticatable
     {
         return $this->hasMany(Borrow::class);
     }
+    
+    public function hasBorrowedBook(Book $book)
+    {
+        return $this->borrows()->where('book_id', $book->id)->exists();
+    }
+    
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
+    }
+
 }

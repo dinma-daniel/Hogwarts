@@ -19,14 +19,14 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        // User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        User::factory()->create([
+            'name' => 'test',
+            'email' => 'test@gmail.com',
+        ]);
 
         $this->call([
-            // BookSeeder::class,
-            // Category::class,
+            BookSeeder::class,
+            Category::class,
             BookCategory::class
         ]);
 

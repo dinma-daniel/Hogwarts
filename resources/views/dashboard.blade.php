@@ -22,13 +22,13 @@
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8 flex flex-row ">
         <div class="flex-1 border border-sky-400 p-6 rounded-lg">
         <h1 class="text-black">Borrowed Books📕</h1>
-        <x-borrowlist/>
+        <x-borrowlistt :borrowedBooks="$borrowedBooks" />
         </div>
         <div class=" p-6">
         </div>
         <div class="flex-1 border border-sky-400 p-6 rounded-lg">
         <h1 class="text-black">New Books available📖</h1>
-        <x-booklist />
+        <x-booklist/>
         </div>
       <br>
     </div>

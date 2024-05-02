@@ -28,12 +28,6 @@
           </svg>
         </button>
       </div>
-      <!-- <div class="hidden lg:flex lg:gap-x-12">
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Product</a>
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Features</a>
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
-        <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Company</a>
-      </div> -->
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <a href="{{ route('login') }}" class="rounded-md bg-gray-100 px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-sky-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Log in <span aria-hidden="true">&rarr;</span></a>
         <a href="{{ route('register') }}" class="rounded-md bg-gray-100 mx-3 px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-sky-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Sign up <span aria-hidden="true">&rarr;</span></a>

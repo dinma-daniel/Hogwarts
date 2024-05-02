@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Borrow;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Book;
 use Illuminate\Http\Request;
 
@@ -30,12 +31,12 @@ class BorrowController extends Controller
     {
         $borrowId = $request->input('borrow_id');
         $borrow = Borrow::findOrFail($borrowId);
-
-        // Update return date or any other logic you need for returning books
-        // For example:
-        // $borrow->return_date = now();
-        // $borrow->save();
-
         return redirect()->route('books.index')->with('success', 'Book returned successfully!');
+    }
+
+    public function borrowedBooks()
+    {
+        $borrowedBooks = Borrow::where('user_id', Auth::id())->with('book')->get();
+        return view('dashboard', ['borrowedBooks' => $borrowedBooks]);
     }
 }
