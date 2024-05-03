@@ -13,7 +13,6 @@ class BookController extends Controller
 {
     public function index()
     {
-
         $books = Book::orderByDesc('author')->get();
         return view('books', ['books' => $books]);
     }
@@ -22,6 +21,12 @@ class BookController extends Controller
     {
         $book = Book::findOrFail($id);
         return view('books.show', ['book' => $book]);
+    }
+
+    public function open($id)
+    {
+        $book = Book::findOrFail($id);
+        return view('book.open', ['book' => $book]);
     }
 
     public function borrow(Request $request, $id)

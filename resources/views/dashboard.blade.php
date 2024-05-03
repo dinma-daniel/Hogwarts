@@ -14,7 +14,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white light:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 light:text-gray-100">
-                    {{ __("You're logged in!") }}
+                    {{ __("Welcome to Hogwarts Library") }}
                 </div>
             </div>
         </div>
@@ -24,12 +24,8 @@
         <h1 class="text-black">Borrowed Books📕</h1>
         <x-borrowlistt :borrowedBooks="$borrowedBooks" />
         </div>
-        <div class=" p-6">
-        </div>
-        <div class="flex-1 border border-sky-400 p-6 rounded-lg">
-        <h1 class="text-black">New Books available📖</h1>
-        <x-booklist/>
-        </div>
+        
+        
       <br>
     </div>
     

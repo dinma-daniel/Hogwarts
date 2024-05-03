@@ -18,6 +18,8 @@ Route::get('/dashboard', [Dashboard::class, 'borrowedBooks'])
 Route::get('/books', [BookController::class, 'index'])->name('books.index');
 Route::get('/books/{id}', [BookController::class, 'show'])->name('books.show');
 Route::post('/books/borrow/{id}', [BookController::class, 'borrow'])->name('books.borrow');
+Route::get('/books/open/{id}', [BookController::class, 'open'])->name('books.open');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
